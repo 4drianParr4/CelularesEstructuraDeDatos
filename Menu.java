@@ -5,9 +5,9 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         Metodos m = new Metodos();
         boolean continuar = true;
-        System.out.println("Ingrese la dimension de la matriz");
+        System.out.println("Cuantos celulares desea registrar?");
         int n = sc.nextInt();
-        CelularObj[][] o = new CelularObj[n][n];
+        CelularObj[] o = new CelularObj[n];
 
         while (continuar) {
             System.out.println("Bienvenidos a Celphones AA");
@@ -22,7 +22,7 @@ public class Menu {
 
             switch (opt) {
                 case 1:
-                    m.LlenarDatos(o, sc);
+                    o = m.LlenarDatos(o, sc);
                     break;
 
                 case 2:
@@ -30,18 +30,20 @@ public class Menu {
                     break;
 
                 case 3:
-                    m.LlenarDatos(o, sc);
+                    o = m.CelularesPromocion(o, sc);
                     break;
 
                 case 4:
-                    m.LlenarDatos(o, sc);
+                    m.MostrarCelularesDescuento(o, sc);
                     break;
 
                 case 5:
                     System.out.println("Vuelva Pronto!!");
+                    continuar = false;
                     break;
             
                 default:
+                    System.out.println("Opcion Invalida");
                     break;
             }
         }

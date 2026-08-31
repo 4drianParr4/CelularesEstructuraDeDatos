@@ -2,19 +2,21 @@ public class CelularObj {
 
     String Modelo;
     String Marca;
-    Double Precio;
+    double Precio;
     int Cantdisp;
     String Caracteristicas;
+    double Descuento;
+    int Descaplicado;
 
-    public CelularObj(String modelo, String marca, Double precio, int cantdisp, String caracteristicas) {
+    public CelularObj(String modelo, String marca, double precio, int cantdisp, String caracteristicas,
+            double descuento, int descaplicado) {
         Modelo = modelo;
         Marca = marca;
         Precio = precio;
         Cantdisp = cantdisp;
         Caracteristicas = caracteristicas;
-    }
-
-    public CelularObj() {
+        Descuento = descuento;
+        Descaplicado = descaplicado;
     }
 
     public String getModelo() {
@@ -33,11 +35,11 @@ public class CelularObj {
         Marca = marca;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return Precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(double precio) {
         Precio = precio;
     }
 
@@ -56,13 +58,20 @@ public class CelularObj {
     public void setCaracteristicas(String caracteristicas) {
         Caracteristicas = caracteristicas;
     }
-    
-    
-    
 
-    
-    
+    public double getDescuento() {
+        return Descuento;
+    }
 
+    public void setDescuento(double descuento) {
+        Descuento = descuento;
+    }
 
-    
+    public int getDescaplicado() {
+        return Descaplicado;
+    }
+
+    public void setDescaplicado(int descaplicado) {
+        Descaplicado = descaplicado;
+    }
 }
